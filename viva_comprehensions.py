@@ -1,3 +1,4 @@
+import math
 from typing import List, Dict, Set, Callable
 import enum
 
@@ -19,7 +20,7 @@ def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
     :return:
     """
 
-    new_list = [x for x in range(start, stop) if x == parity.EVEN]
+    new_list = [x for x in range(start, stop) if parity.ODD]
     return new_list
 
 
@@ -35,7 +36,8 @@ def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
     :param strategy:
     :return:
     """
-    pass
+    new_dict = {x: math.factorial(x) for x in range(start, stop)}
+    return new_dict
 
 
 def gen_set(val_in: str) -> Set:
