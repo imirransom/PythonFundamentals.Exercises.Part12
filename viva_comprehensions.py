@@ -18,7 +18,8 @@ def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
     :param parity:
     :return:
     """
-    new_list = [x for x in range(start, stop) if parity == True]
+
+    new_list = [x for x in range(start, stop) if x == parity.EVEN]
     return new_list
 
 
