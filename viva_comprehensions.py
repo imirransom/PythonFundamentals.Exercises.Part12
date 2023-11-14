@@ -20,7 +20,7 @@ def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
     :return:
     """
 
-    new_list = [x for x in range(start, stop) if parity.ODD]
+    new_list = [x for x in range(start, stop) if x % 2 != parity.value]
     return new_list
 
 
@@ -49,4 +49,6 @@ def gen_set(val_in: str) -> Set:
     :param val_in:
     :return:
     """
-    pass
+    # new_set = {x.upper() for x in set(val_in) if x.islower()}
+    new_set = {x.upper() for x in val_in if x.lower() in val_in}
+    return new_set
