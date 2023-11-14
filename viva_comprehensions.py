@@ -18,7 +18,8 @@ def gen_list(start: int, stop: int, parity: Parity) -> List[int]:
     :param parity:
     :return:
     """
-    pass
+    new_list = [x for x in range(start, stop) if parity == True]
+    return new_list
 
 
 def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
