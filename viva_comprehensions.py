@@ -36,7 +36,7 @@ def gen_dict(start: int, stop: int, strategy: Callable) -> Dict:
     :param strategy:
     :return:
     """
-    new_dict = {x: math.factorial(x) for x in range(start, stop)}
+    new_dict = {x: strategy(x) for x in range(start, stop)}
     return new_dict
 
 
